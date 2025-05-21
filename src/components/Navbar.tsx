@@ -1,5 +1,6 @@
 // Navbar Component
 "use client";
+
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -7,10 +8,19 @@ import { useState } from "react";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Function to close menu when a link is clicked
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-4 sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold font-sans">
+        <Link
+          href="/"
+          className="text-2xl font-bold font-sans"
+          onClick={closeMenu}
+        >
           <span className="text-blue-100">Acme</span>
           <span className="text-white">Bookkeeping</span>
         </Link>
@@ -36,24 +46,28 @@ const Navbar = () => {
           <Link
             href="/"
             className="block py-2 md:py-0 text-blue-100 hover:text-white transition-colors font-medium"
+            onClick={closeMenu}
           >
             Home
           </Link>
           <Link
             href="/about"
             className="block py-2 md:py-0 text-blue-100 hover:text-white transition-colors font-medium"
+            onClick={closeMenu}
           >
             About
           </Link>
           <Link
             href="/services"
             className="block py-2 md:py-0 text-blue-100 hover:text-white transition-colors font-medium"
+            onClick={closeMenu}
           >
             Services
           </Link>
           <Link
             href="/contact"
             className="block py-2 md:py-0 text-blue-100 hover:text-white transition-colors font-medium"
+            onClick={closeMenu}
           >
             Contact
           </Link>
