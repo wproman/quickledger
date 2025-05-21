@@ -21,8 +21,8 @@ const Navbar = () => {
           className="text-2xl font-bold font-sans"
           onClick={closeMenu}
         >
-          <span className="text-blue-100">Acme</span>
-          <span className="text-white">Bookkeeping</span>
+          <span className="text-blue-100">Quick</span>
+          <span className="text-white">Ledger</span>
         </Link>
         <div className="md:hidden">
           <button
