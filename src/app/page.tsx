@@ -1,4 +1,6 @@
 "use client";
+import ServicesSection from "@/components/HomePage/ServicesSection";
+import PhonetModal from "@/components/PhoneModal";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -361,17 +363,23 @@ const HomePage = () => {
             </div>
 
             <div className="text-center mt-16">
+              <PhonetModal />
+              {/* 
               <Button
                 size="lg"
                 className="bg-white text-blue-800 hover:bg-blue-100 px-10 py-5 text-lg font-semibold flex items-center justify-center mx-auto"
+                asChild
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Talk To An Expert
-              </Button>
+                <a href="tel:+8801740066066">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Talk To An Expert
+                </a>
+              </Button> */}
             </div>
           </div>
         </section>
 
+        <ServicesSection />
         {/* The Fourlane Advantage Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
