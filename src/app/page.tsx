@@ -32,8 +32,7 @@ const ProfessionalButton = ({
 }: {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
-  className?: string;
-  [key: string]: any;
+  className?: "";
 }) => {
   const baseClasses =
     "px-8 py-4 text-lg font-medium rounded-lg transition-all duration-300 flex items-center justify-center gap-2";
